@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculdade</title>
+    <style>
+
+        
+        h1 { 
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preencha seus Dados!</h1>
+    Nome do seu país:<input type="text" name="nomepais" id="nomepais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+        
+    </div>
+    <script>
+        function verificar() {
+            var pais = document.querySelector('input#nomepais').value
+            var res = document.querySelector('div#res')
+
+                if (pais == 'Brasil') {
+                res.innerHTML = `Você é Brasileiro!`
+                } else {
+                res.innerHTML = 'Você é Estrangeiro!'
+                }
+        }
+    </script>
+</body>
+</html>
